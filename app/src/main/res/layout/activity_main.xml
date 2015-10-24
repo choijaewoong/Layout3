@@ -20,11 +20,19 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Toolbar Title"
+            android:text="내 Flipboard"
             android:layout_gravity="center"
-            android:id="@+id/toolbar_title" />
+            android:id="@+id/toolbar_title"
+            android:textColor="#000000"
+            android:textSize="20sp"/>
 
     </android.support.v7.widget.Toolbar>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#d5d5d5"
+        />
 
     <!--</android.support.design.widget.AppBarLayout>-->
 
@@ -34,25 +42,78 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_weight="1"></RelativeLayout>
+        android:layout_weight="1"
+        android:paddingTop="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="어디서나 즐기는 Flipboard"
+            android:id="@+id/textView2"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:padding="@dimen/layout_padding"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Flipboard 계정을 만들어 나만의 매거진을 만들고\n       좋아하는 스토리들과 설정을 저장하세요."
+            android:id="@+id/textView3"
+            android:layout_below="@+id/textView2"
+            android:layout_centerHorizontal="true"
+            android:textColor="#262626"
+            android:textSize="15sp"/>
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="만들기"
+            android:id="@+id/button"
+            android:layout_below="@+id/textView3"
+            android:layout_alignLeft="@+id/textView2"
+            android:layout_alignStart="@+id/textView2"
+            android:layout_margin="@dimen/item_margin"/>
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="로그인"
+            android:id="@+id/button2"
+            android:layout_below="@+id/textView3"
+            android:layout_alignRight="@+id/textView2"
+            android:layout_alignEnd="@+id/textView2"
+            android:layout_margin="@dimen/item_margin"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#d5d5d5"
+        />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="2"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="@dimen/layout_padding">
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="팔로잉" />
+            android:text="팔로잉"
+            android:textColor="#000000"
+            android:textSize="15sp"/>
 
         <GridView
             android:id="@+id/gridView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="2" />
+            android:layout_weight="2"
+            android:numColumns="3"/>
 
     </LinearLayout>
 
